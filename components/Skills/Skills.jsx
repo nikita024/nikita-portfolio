@@ -63,7 +63,38 @@ const Skills = () => {
                     <ul className="list-inline-pills mt-3">
                         {skillsData.skills.map((skill, index) => (
                             <li key={index}>
-                                <i className={`${skill.fontawesomeIcon} pe-2`}></i> {skill.name}
+                                {skill.name === 'MongoDB' ? (
+                                    <Image
+                                        src="/images/mongodb.png"
+                                        alt="MongoDB"
+                                        width={16}
+                                        height={12}
+                                        className='pe-2'
+                                        style={{ width: '30px', height: '20px' }}
+                                    />
+                                ) : skill.name === 'Redux' ? (
+                                    <Image
+                                        src="/images/redux.png"
+                                        alt="Redux"
+                                        width={16}
+                                        height={12}
+                                        className='pe-2'
+                                        style={{ width: '26px', height: '18px' }}
+                                    />
+                                ) : skill.name === 'Tailwind' ? (
+                                    <Image
+                                        src="/images/tailwind.png"
+                                        alt="Tailwind"
+                                        width={16}
+                                        height={12}
+                                        className='pe-2'
+                                        style={{ width: '30px', height: '25px' }}
+                                    />
+                                ) : (
+                                    <i className={`${skill.fontawesomeIcon} pe-2`}></i>
+                                )}
+                                {/* <i className={`${skill.fontawesomeIcon} pe-2`}></i>  */}
+                                {skill.name}
                                 {/* <div className="d-inline-block font-family-mono font-small">(<span className="counter">{counters[skill.id]}</span>%)</div> */}
                             </li>
                         ))}

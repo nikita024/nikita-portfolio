@@ -5,6 +5,6 @@ export const connectData = {
         title3: "Let's Connect",
         description: "Feel free to reach out via phone or email",
         phone: "7488416525",
-        email: "nikitaroy0109@gmail.com",
+        email: "work.nikitaroy@gmail.com",
     }
 };
